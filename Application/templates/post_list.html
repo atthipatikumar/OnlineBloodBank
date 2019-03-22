@@ -1,0 +1,46 @@
+{% extends 'base.html' %}	
+{% block content %}
+<center>
+<form >
+		{%csrf_token%}	
+		<table>
+			<th>
+				name
+			</th>
+
+			<th>
+				Location
+			</th>
+			<th>
+				BloodGroup
+			</th>
+
+	{% for i in list %}
+<tr>
+
+	<td>{{i.name}}
+	</td>
+		<td>{{i.location}}
+	</td>
+	<td>{{i.blood_id.blood_group}}
+	</td>
+	</tr>
+
+	{% endfor %}
+
+
+
+		</table>
+
+
+	</form>
+
+</center>
+
+<!-- {{bloodgroup}}
+{% for i in bloodgroup %}
+{{i.id}} 
+{{i.blood_group}} 
+{% endfor %}
+ -->
+ {% endblock %}

@@ -1,0 +1,67 @@
+{% extends 'base.html' %} 
+{% block content %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                        {% load static%}
+
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+  
+
+ <link rel="stylesheet" type="text/css" href="{% static 'css/dataTables.bootstrap.min.css' %}">
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js'%}"></script>
+  <script type="text/javascript" src="{% static 'js/jquery-3.3.1.js'%}"></script>
+  <script type="text/javascript" src="{% static 'js/jquery.dataTables.min.js'%}"></script>
+  <script type="text/javascript" src="{% static 'js/dataTables.bootstrap.min.js'%}"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $('#studyhall').DataTable();
+} );
+</script>
+
+<!-- <style >
+  td{
+    padding: 7px;
+  }
+  
+  td{
+    padding: 7px;
+  }
+</style>
+ -->
+<br>
+</body>
+<!--       <form>
+      BloodGroupName: <input type="text" name="bloodGroup" placeholder="Enter bloodGroup to search">
+      <input type="submit" value="search bloodGroup" >
+    </form>
+      <div class="table-responsive">
+ -->
+ <center>
+        <table id="studyhall" class="table table-striped table-bordered" style="width:55%">
+<thead>
+      <th>BloodGroup</th>
+        <th>Name</th>
+    <th>Address</th>
+    <th>Phone</th>
+
+</thead>
+        <!-- <th>pic</th> -->
+
+
+  <tbody>
+    {% for i in blood %}
+    <tr>
+      <td>{{i.blood_group}}</td>
+           <td>{{i.name}}</td>
+      <td>{{i.addrees}}</td>
+      <td>{{i.cell_no}}</td>      
+      <!-- <td>{{i.pic}}</td>       -->
+
+    </tr>
+    {%endfor%}
+  </tbody>
+</table>
+</div>
+</center>
+ {% endblock %}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+		{{msg}}
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token%}
+CreateBloodGroup<input type="text " value="" name="blood_group"><br>
+<br>
+<input type="submit" name="" value="CreateBloodGroup">
+
+
+	</form>
+<!-- <table>
+
+	<thead>
+		<th>BloodGroup</th>
+	</thead>
+	<tbody>
+		{% for i in BloodGroup%}
+		<tr>
+<td>{{i.blood_group}}</td>
+			<tr>
+		{% endfor%}
+	</tbody>
+</table>
+ -->
+</center>
+</body>
+</html>

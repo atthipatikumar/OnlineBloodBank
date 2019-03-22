@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style >
+/*	img{
+		width: 50%;
+		height: auto;
+	} 			#4267b2;
+*/
+        nav ul{
+            list-style-type: none;
+            /*padding: 100px;*/
+            margin: 0;
+            padding-left: 10%;
+        }
+        nav{
+            overflow: hidden;
+          padding :20px;
+        }
+        nav ul li{
+            float: left;
+                        background-color: #4267b2;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+            padding: 20px 24px;
+            display: block;
+        }
+        table a{
+        	font-size: 20px;
+        	background-color: seagreen;
+        }
+.right {
+    width: 80%;
+    float: left;
+}
+.left{
+    width: 20%;
+    float: left;
+}
+	</style>
+
+</head>
+<body>
+	 <div class="left">
+      <h4 style="padding-left:150px;padding-top: 25px;">Hi {{request.session.user.username}} </h4>
+
+    </div>
+
+        <div class="right">
+
+
+			<nav>
+		<ul>
+			<li>
+			</li>
+						<li>
+		<a href="/update/{{request.session.user.id}}/">UpdateProfile</a>
+			</li>
+
+                 <li >
+                    <a href="/donarlist/">BloodGroupSerach</a>
+            </li>
+
+
+            <li >
+                    <a href="/logout/">LOGOUT</a>
+            </li>
+        </ul>
+	</nav><br><br>
+</div>
+
+<div>
+    <a href="/post/">POST</a>
+</div>
+	        {% block content%}
+
+  {% endblock %}
+
+</body>
+</html>

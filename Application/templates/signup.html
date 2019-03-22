@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	{{msg}}
+	<form method="post">
+		{%csrf_token%}
+
+		username:<input type="text" name="username"><br>
+		password:<input type="password" name="password"><br>
+		name:<input type="text" name="name"><br>
+		bloodGrouP:<select name="blood_id">
+			{% for i in blood_group%}
+			<option value="{{i.id}}">{{i.blood_group}}</option>
+			{% endfor %}
+		</select><br>
+
+		cell_no:<input type="text" name="cell_no"><br>
+
+        addrees:<input type="text" name="addrees"><br>
+		<input type="DonarRegistation">
+
+
+	</form>
+</body>
+</html>
